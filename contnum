@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package plg_menu;
+
+import java.util.Scanner;
+
+public class contnum {
+
+    Scanner Leer = new Scanner(System.in);
+    String cadena;
+
+    char letras;
+    int numeros = 0;
+    static int numeros2 = 0;
+    static int letras2 = 0;
+
+    public contnum() {
+        System.out.println("Ingresa la cadena: ");
+        cadena = Leer.nextLine();
+        char[] cadena2 = cadena.toCharArray();
+        for (int i = 0; i < cadena2.length; i++) {
+            if (Character.isDigit(cadena2[i])) {
+                System.out.println("Numero: " + cadena2[i]);
+                numeros2++;
+            } else {
+                System.out.println("Letra: " + cadena2[i]);
+                letras2++;
+            }
+        }
+
+        System.out.println("Total de letras: " + letras2);
+        System.out.println("Total de numeros: " + numeros2);
+    }
+
+}
